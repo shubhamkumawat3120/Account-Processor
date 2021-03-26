@@ -44,7 +44,7 @@ public class AccountControllerTest {
 
     @Test
     public void testSaveAccountIntegrationTest() {
-        HttpHeaders headers = new HttpHeaders();
+        HttpHeaders headers = new HttpHeaders();  
         headers.setContentType(MediaType.APPLICATION_JSON);
         String sampleJson = "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"emailAddress\": \"john.doe@gmail.com\",\n    \"address\": {\n        \"street\": \"1234 Given Lane\",\n        \"city\": \"newyork2\",\n        \"province_state\": \"ON\",\n        \"country\": \"United State\"\n    }\n}";
 
