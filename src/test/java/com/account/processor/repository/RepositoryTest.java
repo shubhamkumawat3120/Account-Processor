@@ -1,7 +1,6 @@
 package com.account.processor.repository;
 
-import java.util.Optional;
-
+import com.account.processor.entity.CountryEntity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,7 +8,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.account.processor.entity.CountryEntity;
+import java.util.Optional;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
@@ -27,7 +26,7 @@ public class RepositoryTest {
 
     @Test
     public void testFindByCountryNameCountryRepo(){
-        String countryName = "Canada";
+        String countryName = "United State";
         Optional<CountryEntity> optionalCountryEntity = countryDao.findByCountryName(countryName);
         Assertions.assertEquals(optionalCountryEntity.get().getCountryName(), "United State", "Country name not equal");
     }
