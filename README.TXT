@@ -6,7 +6,7 @@
    Database = h2(Inmemory database)
    Schema detail = classpath: schema.sql, data.sql
    Constraint: One account can associate with multiple address.
-               Address will be valid only if country matches from country table.
+               Address will be valid only if country matches with country from country table.
                
   
 3. Api Detail
