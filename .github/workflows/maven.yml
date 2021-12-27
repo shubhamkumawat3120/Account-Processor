@@ -33,6 +33,6 @@ jobs:
         USERNAME: ${{ secrets.DOCKER_USERNAME }}
         PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKERFILE: "Dockerfile"
-        IMAGE_NAME: "shubhamkumawat3120/account-processor"
+        IMAGE_NAME: "shubhamkumawat3120/account-processor" 
         TAG_NAME: "v0.0.1"
         LATEST: "true"
