@@ -26,9 +26,13 @@ jobs:
       run: mvn -B package -DskipTests=true --file pom.xml
    
     - name: Build Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v5
+      uses: timzu/act-docker@master
       with:
-       image: docker-hub-repo/image-name
-       registry: docker.io
-       username: ${{ secrets.DOCKER_USERNAME }}
-       password: ${{ secrets.DOCKER_PASSWORD }}
+        args: --docker
+      env:
+        USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKERFILE: "Dockerfile"
+        IMAGE_NAME: "USERNAME/IMAGE_NAME"
+        TAG_NAME: "v0.0.1"
+        LATEST: "true"
